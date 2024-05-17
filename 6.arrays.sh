@@ -1,4 +1,4 @@
 #!/bin/bash
 Persons=("Ramesh","Suresh","Naresh")
 
-echo "first person is ${persons[0]}"
+echo "first person is ${Persons[0]}"
