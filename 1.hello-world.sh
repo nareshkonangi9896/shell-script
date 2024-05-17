@@ -2,6 +2,9 @@
 
 echo "Hello World,  I am learning shell scripting"
 
-echo "Ramesh : How are you Suresh "
-echo "Suresh : I am fine Ramesh, How are you"
-echo "Ramesh : I am good Suresh"
+Person1 = Ramesh
+Person2 = Suresh
+
+echo "$Person1 : How are you $Person2 "
+echo "$Person2 : I am fine $Person1, How are you"
+echo "$Person1 : I am good $Person2"
