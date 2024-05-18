@@ -5,13 +5,17 @@ SCRIPT_NAME=$0
 LOGFILE=/tmp/SCRIPT_NAME-$DATE.log
 USERID=$(id -u)
 
+R=\e[31m
+G=\e[32m
+N=\e[0m
+
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo "Installation $2.....FAILURE"
+        echo -e " $2.....$R FAILURE"
         exit 1
     else
-        echo "Installation $2.....SUCCESS"
+        echo -e " $2.....$G SUCCESS"
     fi
 }
 
