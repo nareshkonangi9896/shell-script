@@ -22,7 +22,7 @@ then
 #else
 fi
 
-yum install  -y &>> $LOGFILE 
+yum install mysql -y &>> $LOGFILE 
 VALIDATE $? "Installing mysql"
 
 yum install postfix -y &>> $LOGFILE
