@@ -26,8 +26,8 @@ then
 #else
 fi
 
-yum install mysqll -y &>> $LOGFILE 
+yum install mysql -y &>> $LOGFILE 
 VALIDATE $? "Installing mysql"
 
-yum install postfixl -y &>> $LOGFILE
+yum install postfix -y &>> $LOGFILE
 VALIDATE $? "Installing postfix"
