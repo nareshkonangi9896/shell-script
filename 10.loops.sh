@@ -5,6 +5,7 @@ LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 echo "$LOGFILE"
 R="\e[31m"
 G="\e[32m"
+Y="\e[33m"
 N="\e[0m"
 USERID=$(id -u)
 
@@ -22,7 +23,7 @@ EXIST_VALIDATE(){
     yum list installed|grep $1 &>> $LOGFILE  
     if [ $? -eq 0 ]
     then
-        echo -e $i "Already Installed$R ABORT THE INSTALLATION $N"
+        echo -e $i "$Y Already Installed$R ABORT THE INSTALLATION $N"
         exit 1
     else
         echo -e $i "Not Installed previously$G PROCEED TO INSTALL $N" 
