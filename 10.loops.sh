@@ -22,10 +22,10 @@ EXIST_VALIDATE(){
     yum list installed|grep $1 &>> $LOGFILE  
     if [ $? -eq 0 ]
     then
-        echo -e $i "Not Installed previously$G PROCEED TO INSTALL $N"
-    else
         echo -e $i "Already Installed$R ABORT THE INSTALLATION $N"
         exit 1
+    else
+        echo -e $i "Not Installed previously$G PROCEED TO INSTALL $N" 
     fi
 }
 
