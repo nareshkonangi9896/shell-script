@@ -1,6 +1,7 @@
 #!/bin/bash
 DATE=$(date +%F)
 SCRIPT_NAME=$0
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 echo "$LOGFILE"
 R="\e[31m"
 G="\e[32m"
@@ -18,7 +19,7 @@ VALIDATE(){
 }
 
 EXIST_VALIDATE(){
-    yum list installed|grep $1
+    yum list installed|grep $1 &>> $LOGFILE  
     if [ $? -eq 0 ]
     then
         echo -e $i "Not Installed previously$G PROCEED TO INSTALL $N"
