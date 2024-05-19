@@ -9,7 +9,7 @@ USERID=$(id -u)
 echo "USERID IS $USERID"
 for i in $@
 do
-if [ $USERID -e 0 ]
+if [ $USERID -eq 0 ]
 then
     yum install $i -y &>> $LOGFILE
     echo -e $i "Installation $G SUCCESS $N"
