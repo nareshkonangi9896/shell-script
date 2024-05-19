@@ -18,7 +18,7 @@ VALIDATE(){
 }
 
 EXIST_VALIDATE(){
-    yum list installed|grep $i &>> $LOGFILE
+    yum list installed|grep
     if [ $? -eq 0 ]
     then
         echo -e $i "Not Installed previously$G PROCEED TO INSTALL $N"
