@@ -12,9 +12,9 @@ do
 if [ $USERID -eq 0 ]
 then
     yum install $i -y &>> $LOGFILE
-    echo -e $i "Installation $G SUCCESS $N"
+    echo -e $i "Installation$G SUCCESS $N"
 else
-    echo -e $i "Installation $R FAILURE $N"
+    echo -e $i "Installation$R FAILURE $N"
     exit 1       
 fi
 done
