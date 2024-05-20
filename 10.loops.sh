@@ -20,7 +20,7 @@ VALIDATE(){
 }
 
 EXIST_VALIDATE(){
-    yum list installed|grep $1 &>> $LOGFILE  
+    yum list installed $1 &>> $LOGFILE  
     if [ $? -eq 0 ]
     then
         echo -e $i "$Y Already Installed$R ABORT THE INSTALLATION $N"
