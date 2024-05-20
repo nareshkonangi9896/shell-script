@@ -9,7 +9,7 @@ FILES_TO_DELETE=$(find $APP_LOGS -name "*.log" -type f -mtime +14)
 
 while read line;
 do
-    rm -rf $line
-    echo "Deleted $line" &>> $SCRIPT_LOGS/$SCRIPT_NAME-$DATE.log
+    rm -rf line
+    echo "Deleted line" &>> $SCRIPT_LOGS/$SCRIPT_NAME-$DATE.log
 
 done <<< FILES_TO_DELETE
