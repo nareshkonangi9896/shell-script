@@ -10,7 +10,7 @@ echo "$FILES_TO_DELETE"
 
 while read line;
 do
-    rm -rf $line
-    echo "Deleted $line" &>> $SCRIPT_LOGS/$SCRIPT_NAME-$DATE.log
+    rm -rf line
+    echo "Deleted line" &>> $SCRIPT_LOGS/$SCRIPT_NAME-$DATE.log
 
 done <<< $FILES_TO_DELETE
