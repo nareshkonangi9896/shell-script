@@ -13,4 +13,4 @@ do
     rm -rf line
     echo "Deleted line" &>> $SCRIPT_LOGS/$SCRIPT_NAME-$DATE.log
 
-done <<< FILES_TO_DELETE
+done < $FILES_TO_DELETE
