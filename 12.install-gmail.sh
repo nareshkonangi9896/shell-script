@@ -51,7 +51,7 @@ else
     touch /etc/postfix/sasl_passwd  
     VALIDATE $? "creating sasl_passwd file" &>> $LOGFILE
 
-    sed -i '[smtp.gmail.com]:587 $USERNAME:$PASSWORD' /etc/postfix/sasl_passwd
+    sed -i "1 i [smtp.gmail.com]:587 $USERNAME:$PASSWORD" /etc/postfix/sasl_passwd
     VALIDATE $? "Entered username and password" &>> $LOGFILE
 
     postmap /etc/postfix/sasl_passwd
