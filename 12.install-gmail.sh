@@ -12,9 +12,9 @@ N="\e[0m"
 VALIDATE(){
     if [ $1 -eq 0 ];
     then
-        echo "$2 is$G SUCCESS $N"
+        echo -e "$2 is$G SUCCESS $N"
     else
-        echo "$2 is$R FAILURE $N"
+        echo -e "$2 is$R FAILURE $N"
         exit 1
     fi
 }
