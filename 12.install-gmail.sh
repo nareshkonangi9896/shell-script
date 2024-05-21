@@ -5,9 +5,9 @@ DATE=$(date +%F:%H:%M:%S)
 SCRIPT_NAME=$0
 LOGFILE=$LOGDIR/$SCRIPT_NAME-$DATE.log
 
-R="\[31m"
-G="\[32m"
-N="\[0m"
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
 
 VALIDATE(){
     if [ $1 -eq 0 ];
