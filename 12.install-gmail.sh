@@ -1,10 +1,4 @@
 #!/bin/bash
-echo "Please enter Username"
-read -s USERNAME
-echo "Username entered is $USERNAME"
-echo "Please enter Password"
-read -s PASSWORD
-echo "Password entered is $PASSWORD"
 
 LOGDIR=/tmp/
 DATE=$(date +%F:%H:%M:%S)
@@ -26,11 +20,19 @@ VALIDATE(){
 }
 
 ID=$(id -u)
-if [ ID -ne 0 ];
+if [ $ID -ne 0 ];
 then
     echo -e "$R ERROR: Please run this script as ROOT user $N"
     exit 1
 else
+    echo "Please enter Username"
+    read -s USERNAME
+    echo "Username entered is $USERNAME"
+    echo "Please enter Password"
+    read -s PASSWORD
+    echo "Password entered is $PASSWORD"
+
+
     yum update -y --exclude=kernel* &>> $LOGFILE
     VALIDATE $? updating yum
 
@@ -57,5 +59,4 @@ else
 
     echo "This is a test mail & Date $(date)" | mail -s "message" nareshkonangi9896@gmail.com &>> $LOGFILE
      
-
 fi
