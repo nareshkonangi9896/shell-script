@@ -28,7 +28,7 @@ else
     exit 1       
 fi
 
-mail.sh nareshkonangi9896@gmail.com "HIGH DISK USAGE" $MESSAGE "DEVOPS Team" "HIGH DISK USAGE"
+sh mail.sh nareshkonangi9896@gmail.com "HIGH DISK USAGE" $MESSAGE "DEVOPS Team" "HIGH DISK USAGE"
 
 
 
