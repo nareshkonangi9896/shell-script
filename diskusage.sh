@@ -28,7 +28,7 @@ else
     exit 1       
 fi
 
-echo -e "$MESSAGE"
+mail.sh nareshkonangi9896@gmail.com "HIGH DISK USAGE" $MESSAGE "DEVOPS Team" "HIGH DISK USAGE"
 
 
 
