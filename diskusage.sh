@@ -28,7 +28,7 @@ else
     exit 1       
 fi
 
-sh mail.sh nareshkonangi9896@gmail.com "HIGH DISK USAGE" $MESSAGE "DEVOPS Team" "HIGH DISK USAGE"
+sh mail.sh nareshkonangi9896@gmail.com "High Disk Usage" "$MESSAGE" "DEVOPS TEAM" "High Disk usage"
 
 
 
