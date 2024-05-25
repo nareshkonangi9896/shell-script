@@ -28,7 +28,7 @@ else
     exit 1       
 fi
 
-echo "message= $MESSAGE"
+echo -e "message= $MESSAGE"
 
 
 
