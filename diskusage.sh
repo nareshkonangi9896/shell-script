@@ -19,7 +19,7 @@ then
     do
         if [ $DISKUAGE -gt $THRESHOLD ]
         then
-            $message+= "HIGH DISK USAGE ON $DISKNAME : $DISKUSAGE"
+            $message+= "HIGH DISK USAGE ON $DISKNAME : $DISKUAGE"
         fi
     done <<<$DISKUAGE
 else
