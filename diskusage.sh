@@ -20,7 +20,7 @@ then
     DISKNAME=$(echo $line|awk -F " " '{print $1F}')
         if [ $DISKUSAGE -gt $THRESHOLD ];
         then
-            $MESSAGE+= "HIGH DISK USAGE ON $DISKNAME : $DISKUSAGE"
+            $MESSAGE+="HIGH DISK USAGE ON $DISKNAME : $DISKUSAGE"
         fi
     done <<<$DISKUSAGE
 else
