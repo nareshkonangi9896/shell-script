@@ -2,7 +2,7 @@
 
 $TOADDRESS=$1
 $SUBJECT=$2
-$BODY=$3
+$BODY=$(sed -e 's/[]\/$*.^[]/\\&/g' <<< $3)
 $TEAMNAME=$4
 $ALERT_TYPE=$5
 
