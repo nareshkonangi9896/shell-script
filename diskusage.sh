@@ -28,7 +28,7 @@ else
     exit 1       
 fi
 
-echo "$MESSAGE"
+echo $MESSAGE
 
 
 
