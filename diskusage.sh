@@ -13,7 +13,7 @@ DISKUAGE=$(df -hT|grep -vE 'tmpfs|Filesystem') #|awk -F " " '{print $6F}'|cut -d
 THRESHOLD=1
 if [ $USERID -eq 0 ]
 then
-    while IFS  read line
+    while IFS= read line
     do
         echo "usage : $DISKUSAGE"
 
