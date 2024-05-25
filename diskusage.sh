@@ -17,7 +17,7 @@ if [ $USERID -eq 0 ]
 then
     while IFS= read line
     do
-        if [ $DISKUSAGE -gt $THRESHOLD ]
+        if [ $DISKUSAGE -gt $THRESHOLD ];
         then
             $MESSAGE+= "HIGH DISK USAGE ON $DISKNAME : $DISKUSAGE"
         fi
