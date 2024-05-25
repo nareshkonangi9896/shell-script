@@ -15,9 +15,8 @@ if [ $USERID -eq 0 ]
 then
     while IFS= read line
     do
-        echo "usage : $DISKUSAGE"
-
-    done
+        echo "usage : $line"
+    done <<<$DISKUAGE
 else
     echo "Run this script as ROOT user"
     exit 1       
