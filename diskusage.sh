@@ -9,7 +9,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 USERID=$(id -u)
-DISKUAGE=$(df -hT|grep -vE 'tmpfs|Filesystem' #|awk -F " " '{print $6F}'|cut -d % -f 1)
+DISKUAGE=$(df -hT|grep -vE 'tmpfs|Filesystem') #|awk -F " " '{print $6F}'|cut -d % -f 1)
 THRESHOLD=1
 if [ $USERID -eq 0 ]
 then
