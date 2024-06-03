@@ -14,5 +14,5 @@ if [ $? -ne 0 ]
 then
     echo "Installation of mysql is error"
 else
-    echo "Installation of mysql is success"
+    echo "Installation of mysql is success"    
 fi
